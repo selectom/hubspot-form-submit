@@ -55,23 +55,24 @@ hubspotSubmit('your-hubspot-id', 'hubspot-form-id', {
 	})
 ```
 
-With browser (not recommended):
+With browser:
 
 ```html
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 <script src='https://hubspot-form-submit-v1.netlify.com/index.js'></script>
 <script>
-var form = document.querySelector('form')
-form.addEventListener('submit', function(e){
-	e.preventDefault()
-	hubspotSubmit('your-hubspot-id', 'hubspot-form-id', form)
-		.then(function(sent){
-			if(sent){
-				console.log('Done!')
-			}
-		})
-		.catch(function(err){
-			console.error(err)
-		})
-})
+	var form = document.querySelector('form')
+	form.addEventListener('submit', function(e){
+		e.preventDefault()
+		hubspotSubmit('your-hubspot-id', 'hubspot-form-id', form)
+			.then(function(sent){
+				if(sent){
+					console.log('Done!')
+				}
+			})
+			.catch(function(err){
+				console.error(err)
+			})
+	})
 </script>
 ```
