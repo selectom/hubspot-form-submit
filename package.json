@@ -20,8 +20,9 @@
     "build": "run-p build:main build:browser",
     "build:main": "esca-scripts build --input './src/index.js' --output './dist/index.js' --component",
     "build:browser": "esca-scripts build --input './src/index.js' --output './dist-browser/index.js' --component --browser --minify --name hubspotFormSubmit",
-    "dev": "esca-scripts dev ---input './dev/dev.js, ./dev/index.html' --browser",
-    "open:github": "opn https://github.com/escaladesports/hubspot-form-submit",
+	 "dev": "esca-scripts dev ---input './dev/dev.js, ./dev/index.html' --browser",
+	 "netlify": "opn https://app.netlify.com/sites/hubspot-form-submit/deploys",
+	 "travis": "opn https://travis-ci.org/escaladesports/hubspot-form-submit/branches",
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
     "test": "esca-scripts test"
