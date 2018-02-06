@@ -2,17 +2,17 @@
   "name": "hubspot-form-submit",
   "version": "0.0.0",
   "keywords": [
-    "javascript",
-    "node",
-    "module",
-    "boilerplate"
+    "hubspot",
+    "form",
+    "submit",
+    "browser"
   ],
   "main": "dist/index.js",
   "browser": "dist-browser/index.js",
   "author": "Kennedy Rose <krose@escaladesports.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/escaladesports/javascript-module-boilerplate.git"
+    "url": "https://github.com/escaladesports/hubspot-form-submit.git"
   },
   "license": "MIT",
   "scripts": {
@@ -21,7 +21,7 @@
     "build:main": "esca-scripts build --input './src/index.js' --output './dist/index.js' --component",
     "build:browser": "esca-scripts build --input './src/index.js' --output './dist-browser/index.js' --component --browser --minify --name moduleBoilerplate",
     "dev": "esca-scripts dev ---input './dev/dev.js, ./dev/index.html' --browser",
-    "open:github": "opn https://github.com/escaladesports/javascript-module-boilerplate",
+    "open:github": "opn https://github.com/escaladesports/hubspot-form-submit",
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
     "test": "esca-scripts test"
@@ -30,5 +30,9 @@
     "esca-scripts": "^0.12.0",
     "npm-run-all": "^4.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "js-cookie": "^2.2.0",
+    "querystring": "^0.2.0"
+  }
 }
