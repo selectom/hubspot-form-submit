@@ -54,3 +54,24 @@ hubspotSubmit('your-hubspot-id', 'hubspot-form-id', {
 		console.error(err)
 	})
 ```
+
+With browser (not recommended):
+
+```html
+<script src='https://hubspot-form-submit-v1.netlify.com/index.js'></script>
+<script>
+var form = document.querySelector('form')
+form.addEventListener('submit', function(e){
+	e.preventDefault()
+	hubspotSubmit('your-hubspot-id', 'hubspot-form-id', form)
+		.then(function(sent){
+			if(sent){
+				console.log('Done!')
+			}
+		})
+		.catch(function(err){
+			console.error(err)
+		})
+})
+</script>
+```
