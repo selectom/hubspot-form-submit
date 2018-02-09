@@ -11,20 +11,19 @@ async function hubspotFormSubmit(hubspotId, formId, data){
 		return false
 	}
 
-	// Get data as an object
-	if(typeof form !== 'object'){
-		console.log('Input data must be an Element, FormData, or Object')
-		return false
-	}
 	if(data instanceof Element){
 		data = new FormData(data)
 	}
-	if(data instanceof FormData) {
+	else if(data instanceof FormData) {
 		let result = {}
 		for (let entry of data.entries()) {
 			result[entry[0]] = entry[1]
 		}
 		data = result
+	}
+	else if(typeof form !== 'object'){
+		console.log('Input data must be an Element, FormData, or Object')
+		return false
 	}
 
 	// Create querystring
