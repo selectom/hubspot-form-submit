@@ -228,6 +228,7 @@ var hubspotFormSubmit = function () {
                 'Content-Type': 'application/x-www-form-urlencoded',
                 'Content-Length': formQueryString.length
               },
+              mode: 'no-cors',
               body: formQueryString
             };
             _context.prev = 36;

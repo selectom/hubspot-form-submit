@@ -51,6 +51,7 @@ async function hubspotFormSubmit (hubspotId, formId, data) {
       'Content-Type': 'application/x-www-form-urlencoded',
       'Content-Length': formQueryString.length
     },
+    mode: 'no-cors',
     body: formQueryString
   }
   try {
